@@ -11,7 +11,7 @@ document.addEventListener('click', function(event) {
 
     var isClickInsideNavbar = navMenu.contains(targetElement) || toggleButton.contains(targetElement);
 
-    
+
     if (!isClickInsideNavbar && navMenu.classList.contains('active')) {
         toggleMenu();
     }

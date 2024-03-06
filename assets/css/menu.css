@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/assets/img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-menu {
+    position: absolute;
+    padding: 30px;
+    right: 0px;
+    top: 0;
+    z-index: -999;
+    transform: translateY(-90px);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    /* display: none; */
+}
+
+
+.nav-menu a {
+    color: black;
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+    text-align: center;
+}
+
+/* .nav-menu a:hover {
+    color: yellow;
+    transition: .4s;
+} */
+
+.nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    background-color: black;
+    right: 0;
+    top: 60px;
+    transform: translateY(1px);
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.nav-menu.active a {
+    color: white;
+}
+
+.nav-menu.active a:hover {
+    color: yellow;
+    transition: .4s;
+}
+
+#tombol {
+    background-color: black;
+    width: 25px;
+    height: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#tombol div {
+    width: 100%;
+    height: 5px;
+    background-color: yellow;
+}
+
+
+@media (min-width : 768px) {
+
+    .nav-menu {
+        width: 40%;
+        /* z-index: -9999; */
+        position: static;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        transform: translateY(1px);
+    }
+
+    #tombol {
+        display: none;
+    }
+
+}
+
+
+/* ========== MOBILE ========== */
+
+@media only screen and (max-width : 767px) {
+
+    main {
+        position: relative;
+        z-index: -999;
+        top: 70px;
+    }
+
+    .all-container-title {
+        width: 100%;
+        text-align: center;
+        max-width: 70%;
+        margin: auto;
+        margin-bottom: var(--mb-mobile-titleImage);
+    }
+
+    .all-title {
+        font-family: 'Oswald', sans-serif;
+        font-size: var(--font-mobile-title);
+        margin-bottom: var(--mb-mobile-titleText);
+    }
+
+    .all-text {
+        font-family: 'poppins', sans-serif;
+        font-size: 16px;
+    }
+
+
+/* ---------- NAVBAR MOBILE ------------ */
+.navbar {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    color: #FCE836;
+    justify-content: space-between;
+}
+
+#logo {
+    font-size: var(--font-mobile-title);
+    font-family: "Oswald", sans-serif;
+}
+
+
+/* ---------- TITLE MENU MOBILE -------------- */
+.section-title-menu {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+    position: relative;
+    margin-bottom: var(--mb-mobile-section);
+}
+
+.section-title-menu img {
+    width: 100%;
+}
+
+.wrapper-title-menu {
+    width: 100%;
+    max-width: 70%;
+    text-align: center; 
+    color: white; 
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--mb-mobile-titleText);
+}
+
+.wrapper-title-menu h1 {
+    font-size: var(--font-mobile-title);
+    font-family: 'Oswald', sans-serif;
+}
+
+.wrapper-title-menu p {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* --------- IMAGE MENU MOBILE ---------- */
+.section-img-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--mb-mobile-section);
+}
+
+.section-img-menu h1 {
+    margin-bottom: var(--mb-mobile-section);
+    font-size: var(--font-tablet-title);
+    background-color: black;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.container-img-menu {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    row-gap: 100px;
+}
+
+.wrapper-img-menu {
+    width: 60%;
+    text-align: center;
+    background-color: re;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.wrapper-img-menu:hover {
+    transform: scale(1.2);
+    
+}
+
+.wrapper-img-menu img {
+    width: 85%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.wrapper-img-menu p {
+    background-color: black;
+    color: white;
+    font-size: var(--font-mobile-text);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    padding: 12px;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+}
+
+/* ------------- FOOTER MOBILE ------------ */
+.section-footer {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: #FCE836;
+    text-align: center;
+    padding: 40px;
+}
+
+.section-footer h3, h4 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.section-footer h3 {
+    margin-bottom: var(--mb-mobile-titleText);
+    font-size: 20px;
+}
+
+}
+
+
+
+
+/* ---------------- VARIABLE CSS ------------------ */
+
+/* ========== FONT ========== */
+:root {
+    --font-mobile-title : 22px;
+    --font-mobile-text : 16px;
+
+    --font-tablet-title : 30px;
+    --font-tablet-text : 18px;
+
+    --font-desktop-title : 40px;
+    --font-desktop-text : 20px;
+}
+
+/* ========== COLOR ========== */
+:root {
+    --color-primary : #000;
+    --color-secondary : #fff;
+    --color-third : #FCE836;
+}
+
+/* ========== MARGIN ========== */
+:root {
+    --mb-mobile-section : 70px;
+    --mb-mobile-titleText : 20px;
+    --mb-mobile-titleImage : 50px;
+    --mb-mobile-divDiv : 40px;
+
+    --mb-tablet-section : 90px;
+    --mb-tablet-titleText : 40px;
+    --mb-tablet-titleImage : 60px;
+    --mb-tablet-divDiv : 55px;
+
+    --mb-desktop-section : 110px;
+    --mb-desktop-titleText : 50px;
+    --mb-desktop-titleImage : 70px;
+    --mb-desktop-divDiv : 60px;
+}
