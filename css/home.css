@@ -26,7 +26,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
-    height: 4000px;
 }
 
 
@@ -38,11 +37,13 @@ a, p {
 }
 
 .all-wrapper-title {
-    text-align: center;
     display: flex;
     flex-direction: column;
     row-gap: var(--mb-titleText);
     margin-bottom: var(--mb-divDiv);
+    width: 100%;
+    max-width: 80%;
+    text-align: center;
 }
 
 .all-title {
@@ -111,7 +112,7 @@ a, p {
 
 main {
     position: relative;
-    top: 100px;
+    top: 70px;
     padding: 0 7%;
 }
 
@@ -119,8 +120,7 @@ main {
 /* ===== TITLE ==================================== */
 .section-title {
     width: 100%;
-    padding: 3rem 0;
-    margin-bottom: var(--mb-divDiv);
+    padding: var(--mb-divDiv) 0;
 }
 
 .section-title h1 {
@@ -179,6 +179,13 @@ main {
 
 
 /* ===== DINE IN ========================= */
+.section-dinein {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .tempat-makan-title {
     margin-top: var(--mb--section);
 }
@@ -227,11 +234,13 @@ main {
     justify-content: center;
     align-items: center;
     padding: 4rem;
-    row-gap: var(--mb-divDiv);
+    row-gap: var(--mb-titleImage);
+    margin-bottom: var(--mb--section);
 }
 
 .text-center {
     text-align: center;
+    width: 80%;
 }
 
 .wrapper-online-img {
@@ -242,6 +251,79 @@ main {
 }
 
 
+/* ===== TESTI ========================== */
+.section-testi {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--mb--section);
+}
+
+.section-testi img {
+    width: 60%;
+}
+
+.testi-text span{
+    font-size: 40%;
+}
+
+
+/* ===== SOSMED ========================= */
+.section-sosmed {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--mb--section);
+}
+
+.container-sosmed {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper-sosmed {
+    width: 50%;
+    display: grid;
+    place-items: center;
+    row-gap: var(--mb-titleText);
+}
+
+.wrapper-sosmed img {
+    width: 20%;
+}
+
+.wrapper-sosmed p {
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* ===== FOOTER ====================== */
+.section-footer {
+    width: 100%;
+    background-color: black;
+    color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.section-footer .all-wrapper-title {
+    row-gap: 2rem;
+    margin-bottom: 0;
+}
+
+.section-footer p {
+    color: var(--common);
+    font-family: 'Oswald', sans-serif;
+}
 
 
 
@@ -307,6 +389,15 @@ main {
         transform: translateY(70px);
     }
 
+
+    /* ===== TITLE ===== */
+    .section-title h1 {
+        font-size: 3.2rem;
+        font-family: 'Oswald', sans-serif;
+        margin-bottom: var(--mb-titleText);
+    }
+
+
     /* ===== REASONS ========================= */
     .wrapper-img-reasons {
         width: 70%;
@@ -320,7 +411,16 @@ main {
 
     /* ===== DINE IN ========================== */
     .wrapper-dinein img {
-        width: 25%;
+        width: 28%;
+    }
+
+    .wrapper-online-img img {
+        width: 20%;
+    }
+
+    /* ===== SOSMED ==================== */
+    .wrapper-sosmed img {
+        width: 30%;
     }
 
 }
@@ -330,6 +430,13 @@ main {
 
     html {
         font-size: 65%;
+    }
+
+    /* ===== TITLE =========== */
+    .section-title h1 {
+        font-size: 3rem;
+        font-family: 'Oswald', sans-serif;
+        margin-bottom: var(--mb-titleText);
     }
 
     /* ===== REASONS ======================== */
